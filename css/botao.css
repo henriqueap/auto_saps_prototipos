@@ -1,0 +1,31 @@
+.acao {
+   border-top: 1px solid #cf3030;
+   background: #d66c65;
+   background: -webkit-gradient(linear, left top, left bottom, from(#cf5640), to(#d66c65));
+   background: -webkit-linear-gradient(top, #cf5640, #d66c65);
+   background: -moz-linear-gradient(top, #cf5640, #d66c65);
+   background: -ms-linear-gradient(top, #cf5640, #d66c65);
+   background: -o-linear-gradient(top, #cf5640, #d66c65);
+   padding: 5px 10px;
+   -webkit-border-radius: 8px;
+   -moz-border-radius: 8px;
+   border-radius: 8px;
+   -webkit-box-shadow: rgba(0,0,0,1) 0 1px 0;
+   -moz-box-shadow: rgba(0,0,0,1) 0 1px 0;
+   box-shadow: rgba(0,0,0,1) 0 1px 0;
+   text-shadow: rgba(0,0,0,.4) 0 1px 0;
+   color: #ede1e2;
+   font-size: 14px;
+   font-family: Helvetica, Arial, Sans-Serif;
+   text-decoration: none;
+   vertical-align: middle;
+   }
+.acao:hover {
+   border-top-color: #c73920;
+   background: #c73920;
+   color: #ccc;
+   }
+.acao:active {
+   border-top-color: #a84545;
+   background: #a84545;
+   }

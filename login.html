@@ -1,0 +1,143 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<title> SAPS - Sistema de Acompanhamento de Projetos de Seguran&ccedil;a - Acesso	</title>
+		<!-- Icons -->
+		<link href="favicon.ico" type="image/x-icon" rel="icon" />
+		<link href="favicon.ico" type="image/x-icon" rel="shortcut icon" />
+		<!-- CSS -->
+		<link rel="stylesheet" type="text/css" href="./css/bootstrap.min.css" />
+		<link rel="stylesheet" type="text/css" href="./css/bootstrap-responsive.min.css" />
+		<link rel="stylesheet" type="text/css" href="./css/font-awesome.min.css" />
+		<link rel="stylesheet" type="text/css" href="./css/ace.css" />
+		<link rel="stylesheet" type="text/css" href="./css/ace-responsive.min.css" />
+		<link rel="stylesheet" type="text/css" href="./css/ace-skins.css" />
+		<link rel="stylesheet" type="text/css" href="./css/superfish2.css" />
+		<link rel="stylesheet" type="text/css" href="./css/tabs.css" />
+		<link rel="stylesheet" type="text/css" href="./css/colorbox/colorbox.css" />
+		<link rel="stylesheet" type="text/css" href="./css/cleditor/cleditor.css" />
+		<link rel="stylesheet" type="text/css" href="./css/custom.css" />
+		<link rel="stylesheet" type="text/css" href="./css/ui-lightness/jquery-ui-1.7.3.custom.css" />
+		<link rel="stylesheet" type="text/css" href="./css/select2.min.css" />
+		<link rel="stylesheet" type="text/css" href="./css/smoothness/jquery-ui-1.7.3.custom.css" /> 
+		<!--[if lt IE 9]>
+			<link rel="stylesheet" type="text/css" href="/serten/theme/saps2/css/ace-ie.min.css" />
+		<![endif]-->
+	</head>
+	<body>	
+		<div class="navbar navbar-inverse">
+			<div class="navbar-inner">
+				<div style="height: 0px;text-align: center; margin-top: 2px">
+					<div id="loading"></div>
+				</div>	 
+				<div class="container-fluid">
+					<a class="brand" href="#">
+						<small style="font-weight: bolder">Sistema de Acompanhamento de Projetos de Seguran&ccedil;a - SAPS</small>
+					</a>
+				</div><!--/.container-fluid-->
+			</div><!--/.navbar-inner-->
+		</div><!--/.navbar-->
+
+		<div class="container-fluid" id="main-container">
+			<div id="main-content" style="margin-left: auto; margin-right: auto" class="clearfix">                                   
+				<div class="row-fluid">
+					<div class="span4 offset4" style="margin-top: 20px; padding: 20px" >                               
+						<div id="authMessage" class="message">Área restrita!<br>Você não tem privilégios para esta ação!</div>  
+						<div id="login" class="box" style="padding-left: 10px; padding-right: 10px; padding-bottom: 10px">
+							<form action="/serten/usuarios/login" id="UsuarioLoginForm" method="post" accept-charset="utf-8">
+								<div style="display:none;">
+									<input type="hidden" name="_method" value="POST" />
+								</div>
+								<div id="page-header" class="position-relative" style="margin-bottom: 20px">
+									<h1 class="page-header">
+										Login do Usuário <small><i class="icon-double-angle-right"></i> Infome matrícula e senha</small>
+									</h1>
+								</div><!--/page-header-->
+								<div class="input text">
+									<label for="UsuarioMatricula">Matrícula</label>
+									<input name="data[Usuario][matricula]" type="text" mask="matricula" id="UsuarioMatricula" />
+								</div>
+								<div class="input password">
+									<label for="UsuarioSenha">Senha</label>
+									<input type="password" name="data[Usuario][senha]" id="UsuarioSenha" />
+								</div>
+								<div class="submit">
+									<input class="btn btn-success" type="submit" value="Autenticar" />
+								</div>
+								<div class="form-row">
+									<br />
+									<a href="redefinicao.html">Esqueceu sua senha?</a>&nbsp;&nbsp;
+									<a href="cadastro.html" >Fazer cadastro</a>&nbsp;&nbsp;
+								</div>
+
+							</form>
+						</div>
+					</div>
+				</div>
+			</div><!-- #main-content -->
+		</div><!--/.fluid-container#main-container-->
+		
+		<!-- Modal -->
+		<div class="modal hide fade" id="modal-busca">
+			<div class="modal-body">
+				<div id="form-busca-content">
+						Carregando...
+				</div>
+			</div>
+			<div class="modal-footer">
+				<a href="#" class="btn" data-dismiss="modal">Fechar</a>
+			</div>
+		</div><!--/.modal-->
+
+		<a href="#" id="btn-scroll-up" class="btn btn-small btn-inverse">
+			<i class="icon-double-angle-up icon-only"></i>
+		</a>
+
+		<div id="footer">
+			<p class="muted credit" style="text-align: center">
+				Corpo de Bombeiros Militar do Rio Grande do Norte - 2017 <br> Desenvolvido por CTIInf - CBMAL
+			</p>
+		</div>
+
+		<!-- Scripts -->
+		<script type="text/javascript" src="/serten/theme/saps2/js/jquery-1.9.1.min.js"></script>
+		<script type="text/javascript" src="/serten/theme/saps2/js/jquery-migrate-1.0.0.min.js"></script>
+		<script type="text/javascript" src="/serten/theme/saps2/js/bootstrap.js"></script>
+		<script type="text/javascript" src="/serten/theme/saps2/js/jquery-ui-1.9.2.custom.min.js"></script>
+		<script type="text/javascript" src="/serten/theme/saps2/js/superfish.js"></script>
+		<script type="text/javascript" src="/serten/theme/saps2/js/jquery.tools.min.js"></script>
+		<script type="text/javascript" src="/serten/theme/saps2/js/expand.js"></script>
+		<script type="text/javascript" src="/serten/theme/saps2/js/mask.js"></script>
+		<script type="text/javascript" src="/serten/theme/saps2/js/mask_valor.js"></script>
+		<script type="text/javascript" src="/serten/theme/saps2/js/mascaras.js"></script>
+		<script type="text/javascript" src="/serten/theme/saps2/js/colorbox.js"></script>
+		<script type="text/javascript" src="/serten/theme/saps2/js/cleditor.min.js"></script>
+		<script type="text/javascript" src="/serten/theme/saps2/js/gatilhos.js"></script>
+		<script type="text/javascript" src="/serten/theme/saps2/js/jquery.gmap.js"></script>
+		<script type="text/javascript" src="/serten/theme/saps2/js/custom.js"></script>
+		<script type="text/javascript" src="/serten/theme/saps2/js/ace-elements.min.js"></script>
+		<script type="text/javascript" src="/serten/theme/saps2/js/ace.min.js"></script>
+		<!--[if lt IE 9]>
+			<script type="text/javascript" src="/serten/theme/saps2/js/excanvas.min.js"></script>
+		<![endif]-->
+		<script type="text/javascript">
+			$(document).ready(function()	{
+				$('ul.sf-menu').superfish();
+				$("ul.tabs").tabs("div.panes > div.panes");
+				$('#loading').hide();
+
+				$('#loading').ajaxStart(function() {
+					$(this).show();	
+				});
+
+				$('#loading').ajaxStop(function(){
+					$(this).hide();	
+				});	
+			});
+		</script>
+
+	</body>
+</html>

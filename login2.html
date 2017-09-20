@@ -1,0 +1,124 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />        
+        <title>
+            
+            SAPS - Sistema de Acompanhamento de Projetos de Seguran&ccedil;a
+
+            Login      </title>
+
+
+    <link href="favicon.ico" type="image/x-icon" rel="icon" />
+    <link href="favicon.ico" type="image/x-icon" rel="shortcut icon" />
+
+	<link rel="stylesheet" type="text/css" href="./css/bootstrap.min.css" />
+	<link rel="stylesheet" type="text/css" href="./css/bootstrap-responsive.min.css" />
+	<link rel="stylesheet" type="text/css" href="./css/font-awesome.min.css" />
+        <!--[if IE 7]>
+        <link rel="stylesheet" type="text/css" href="./css/font-awesome-ie7.min.css" />        <![endif]-->
+        
+	<link rel="stylesheet" type="text/css" href="./css/ace.css" />
+	<link rel="stylesheet" type="text/css" href="./css/ace-responsive.min.css" />
+	<link rel="stylesheet" type="text/css" href="./css/ace-skins.css" />
+	<link rel="stylesheet" type="text/css" href="./css/superfish2.css" />
+	<link rel="stylesheet" type="text/css" href="./css/tabs.css" />
+	<link rel="stylesheet" type="text/css" href="./css/colorbox/colorbox.css" />
+	<link rel="stylesheet" type="text/css" href="./css/cleditor/cleditor.css" />
+	<link rel="stylesheet" type="text/css" href="./css/custom.css" />
+	<link rel="stylesheet" type="text/css" href="./css/ui-lightness/jquery-ui-1.7.3.custom.css" />
+	<link rel="stylesheet" type="text/css" href="./css/select2.min.css" />
+	<link rel="stylesheet" type="text/css" href="./css/smoothness/jquery-ui-1.7.3.custom.css" />        <!--[if lt IE 9]>
+        <link rel="stylesheet" type="text/css" href="./css/ace-ie.min.css" />        <![endif]-->
+
+        
+    </head>
+    <!--Fim-->
+
+
+    <body>	
+        <div class="navbar navbar-inverse">
+            <div class="navbar-inner">
+                <div class="container-fluid">				
+                    <table>
+						<tr>
+							<td>
+								<img src="http://www2.defesasocial.rn.gov.br/cbmrn/cbdocs/cbmrn.png" width="80" height="80" />
+							</td>
+
+							<td>					
+								<font class="brand" >Sistema de Acompanhamento de Projetos de Seguran&ccedil;a - SAPS</font> 
+							</td>
+						</tr>
+					</table>
+				</div><!--/.container-fluid-->
+			</div><!--/.navbar-inner-->
+		</div><!--/.navbar-->
+
+        ﻿<div id="page-header" class="position-relative">
+    		<h1 class="page-header">Login <small><i class="icon-double-angle-right"></i> Cliente/Profissional</small>       
+   			</h1>
+		</div>
+		
+		
+	<!--/page-header-->
+		
+		<div class="widget-box" >
+			<div class="widget-header">
+				<h5>Entrar</h5>				
+			</div>
+			
+			<div class="widget-body">
+			 <div class="widget-main">
+				<div class="clientes form">
+					<form action="/serten/clientes/edit" id="ClienteEditForm" method="post" accept-charset="utf-8">
+					<div style="display:none;"><input type="hidden" name="_method" value="POST" />
+					</div>	
+						<fieldset>
+ 		
+							<div class="input text required"><label for="nomelogin">Nome </label>
+							<input name="nome" type="text" upper="true" class="span2" maxlength="50" id="nomelogin"/>
+							</div>
+
+							<div class="input text required"><label for="senhalogin">Senha</label>
+							<input id="id_password" name="password" type="password" class="span2" required />
+							<input type="hidden" name="this_is_the_login_form" value="5" />
+                    		<input type="hidden" name="next" value="/" />
+							</div>
+						</fieldset>
+						<div class="form-row">
+                    		<a href="solicitar_trocar_senha/">Esqueceu sua senha?</a>
+                    		<a href="solicitar_trocar_senha/">Deseja alterar sua senha?</a>
+                		</div>
+                		<div class="form-actions">
+                    	<div class="submit"><input class="btn btn-success" type="submit" value="Acessar"/>
+                    	</div>
+                    	
+                    </form>
+                </div>
+             </div>
+         	</div>
+        </div>
+
+        <div class="modal hide fade" id="modal-busca">
+            <div class="modal-body">
+                <div id="form-busca-content">
+                    Carregando...
+                </div>
+            </div>
+            <div class="modal-footer">
+                <a href="#" class="btn" data-dismiss="modal">Fechar</a>				
+            </div>
+        </div>               
+
+        <a href="#" id="btn-scroll-up" class="btn btn-small btn-inverse">
+            <i class="icon-double-angle-up icon-only"></i>
+        </a>
+       
+        <div id="footer" style="margin-right: 0px;"> 
+        	<p style="text-align: center"> 
+        		Corpo de Bombeiros Militar do Rio Grande do Norte - 2017 <br> Desenvolvido pela Galera do SAPS - PDS Web
+        	</p> 
+        </div>
+    	
+    </body>
+</html>
