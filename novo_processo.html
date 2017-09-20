@@ -28,14 +28,14 @@
 		<![endif]-->
 	</head>
 	<body>
-		
+
 		<div class="container-fluid" id="main-container">
 			<div id="main-content" class="clearfix">
 				<div id="page-content" class="clearfix">
-					<script type="text/javascript">	
+					<script type="text/javascript">
 						$(document).ready(function(){
-								
-							//$('#engenheiro').attr("disabled",true);	
+
+							//$('#engenheiro').attr("disabled",true);
 							//$('#dat_aberturaDay').attr("disabled",true);
 							//$('#dat_aberturaMonth').attr("disabled",true);
 							//$('#dat_aberturaYear').attr("disabled",true);
@@ -87,7 +87,7 @@
 									$('#dat_finalYear').attr("disabled",true);
 								}
 							});
-				
+
 							function retorna_dias_uteis(data, dias, direcao, dias_uteis) {
 								if (dias == 0) {
 									//return data;
@@ -99,28 +99,28 @@
 								//Verifica se o dia é util
 								isFimDeSemana = data.getDay() in { 0: 'Sunday', 6: 'Saturday' };
 								//if (!isFimDeSemana) { dias--; }
-								//Se for util soma um dia no contador 
+								//Se for util soma um dia no contador
 								if (!isFimDeSemana) {
 									dias_uteis++;
 								}
-								// adiciona/subtrai um dia 
+								// adiciona/subtrai um dia
 								data.setDate(data.getDate() + direcao);
-								
-								dias--; 
+
+								dias--;
 								return retorna_dias_uteis(data, dias, direcao, dias_uteis);
 							}
-						
-							/* Antes de submeter o formulário de notificação toma o valor do editor e seta no valor da dsc_notificacao do formulário a ser submetido */	
+
+							/* Antes de submeter o formulário de notificação toma o valor do editor e seta no valor da dsc_notificacao do formulário a ser submetido */
 							$("#ProjetoAddForm").submit(function(){
-								
+
 								var engenheiro = $('#engenheiro').val();//valor engenheiro
 								var tipoprojeto = $('#tipoprojeto').val()//tipo projeto
-								
+
 								if(tipoprojeto==''){//verifica se é do tipo completo e não foi selecionado um engenheiro
 									alert('Por favor selecione o tipo de projeto!');
 									return false;
 								}
-								
+
 								if(engenheiro == '' && tipoprojeto==1){//verifica se é do tipo completo e não foi selecionado um engenheiro
 									alert('Em projetos Completos é necessário indicar o Engenheiro Resposável!\nPor favor selecione um engenheiro!');
 									return false;
@@ -131,7 +131,7 @@
 									$('#engenheiro').focus();
 									return false;
 								}
-								
+
 								if(engenheiro == '' && tipoprojeto==3){//verifica se é do tipo subloja e não foi selecionado um engenheiro
 									alert('Em projetos "Subloja" é necessário indicar o Engenheiro Resposável!\nPor favor selecione um engenheiro!');
 									$('#engenheiro').focus();
@@ -162,18 +162,18 @@
 									}
 								}
 								//return true;//se true submete
-							});	
-							
+							});
+
 							//inicia o editor
 							var editor = $("#alvo").cleditor({width:600, height:250})[0];
-								
+
 							$(".nota input").change(function(){
 								if($(this).attr('checked')){
 									var atual = $('#alvo').val();
 									$('#alvo').val(atual + '<br>' + $(this).val());
-									editor.updateFrame();// atualizando o valor do editor após inserção dos valores na textarea 					
+									editor.updateFrame();// atualizando o valor do editor após inserção dos valores na textarea
 								}
-							});	
+							});
 						});
 					</script>
 					<div id="page-header" class="position-relative">
@@ -205,14 +205,14 @@
 											<input type="hidden" name="_method" value="POST" />
 										</div>
 										<fieldset>
-					
+
 											<div class="input select required">
 												<label for="tipoprojeto">Tipo Processo</label>
 												<select name="data[Projeto][cod_tipoprojeto]" id="tipoprojeto">
 													<option value="">-- Selecione --</option>
 													<option value="1">AVCB(Completo)</option>
 													<option value="2">CAVL(Temporário)</option>
-													<option value="3">AVCB(SubLoja)</option>
+													<!--option value="3">AVCB(SubLoja)</option-->
 													<option value="4">CLCB</option>
 												</select>
 											</div>
@@ -465,18 +465,18 @@
 															<!-- inicio das frases prontas -->
 															<!--form-->
 															<a data-toggle="collapse" data-target="#g1" OnMouseOver="this.style.cursor='pointer';"><i class="icon-edit"></i> DOCUMENTOS ENTREGUES PELO PROPRIETÁRIO</a>
-															<div id="g1" class="collapse" > 
+															<div id="g1" class="collapse" >
 																<div class="box">
 																	<div class="nota">
-																		<input type="checkbox" value="ANOTAÇÃO DE RESPONBILIDADE TÉCNICA - ART: ___" />	
+																		<input type="checkbox" value="ANOTAÇÃO DE RESPONBILIDADE TÉCNICA - ART: ___" />
 																		<label for="Tipo8">ANOTAÇÃO DE RESPONBILIDADE TÉCNICA - ART: 00 (QTDADE)<label>
 																	</div>
 																	<div class="nota">
-																		<input type="checkbox" value="MEMORIAIS DESCRITIVOS: ___" />	
+																		<input type="checkbox" value="MEMORIAIS DESCRITIVOS: ___" />
 																		<label for="Tipo8">MEMORIAIS DESCRITIVOS: 00 (QTDADE)<label>
 																	</div>
 																	<div class="nota">
-																		<input type="checkbox" value="PROJETO ARQUITETÔNICO: ___" />	
+																		<input type="checkbox" value="PROJETO ARQUITETÔNICO: ___" />
 																		<label for="Tipo8">PROJETO ARQUITETÔNICO: 00 (QTDADE)<label>
 																	</div>
 																	<div class="nota">
@@ -484,19 +484,19 @@
 																		<label for="Tipo8">PROJETO DE COMBATE À INCÊNDIO: 00 (QTDADE)<label>
 																	</div>
 																	<div class="nota">
-																		<input type="checkbox" value="EMAIL: ___" />	
+																		<input type="checkbox" value="EMAIL: ___" />
 																		<label for="Tipo8">EMAIL: 00 (QTDADE)<label>
 																	</div>
 																	<div class="nota">
-																		<input type="checkbox" value="MÍDIA DIGITAL: ___" />	
+																		<input type="checkbox" value="MÍDIA DIGITAL: ___" />
 																		<label for="Tipo8">MÍDIA DIGITAL: 00 (QTDADE)<label>
 																	</div>
 																	<div class="nota">
-																		<input type="checkbox" value="OUTROS: ___" />	
+																		<input type="checkbox" value="OUTROS: ___" />
 																		<label for="Tipo8">OUTROS: 00 (QTDADE)<label>
 																	</div>
 																	<div class="nota">
-																		<input type="checkbox" value="NENHUM." />	
+																		<input type="checkbox" value="NENHUM." />
 																		<label for="Tipo8">NENHUM.<label>
 																	</div>
 																</div>
@@ -506,7 +506,7 @@
 													</div><!--/.widget-main-->
 												</div><!--/.widget-body-->
 											</div><!--/widget-box transparent-->
-											
+
 											<div class="input textarea">
 												<label for="alvo">Documentos</label>
 												<textarea name="data[EntradaProjeto][dsc_docs]" id="alvo" cols="30" rows="6" ></textarea>
