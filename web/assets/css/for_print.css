@@ -1,0 +1,175 @@
+* { 
+	/* background: transparent !important; 
+	color: #000 !important; */
+	text-shadow: none !important; 
+	filter:none !important; 
+	-ms-filter: none !important; 
+} 
+
+body {
+	margin:0; 
+	padding:0;
+	line-height: 1.4em;
+	color: #000;
+	/*height: 841.9px;
+	width: 595.28px;*/
+	height: 1250px;
+	width: 1000px;
+}
+
+#container{
+	/*border: 1px solid blue;*/
+	background: url("http://sistemascbm.rn.gov.br/serten/img/avcb.png") no-repeat;
+	background-position: center center; 
+	background-size: 100% 100%;
+	margin:0;
+	padding-top: 20%;
+	padding-bottom: 0;
+	height: 100%;
+	width: 100%;
+}
+
+#content{
+	/*border: 1px solid blue;*/
+	margin: -13% 0% 0% 8%;
+	height: 105%;
+	width: 84%;
+}
+
+/* CSS específico para o Firefox */
+@-moz-document url-prefix() {
+	body {
+		height: 1000px;
+		width: 800px;
+	}
+	
+	#container {
+		/*border: 1px solid red;*/
+		background: url("http://sistemascbm.rn.gov.br/serten/img/avcb.png") no-repeat;
+		background-position: left center; 
+		background-size: 95% 100%;
+		margin:0;
+		padding-top: 10%;
+		padding-bottom: 0;
+		height: 100%;
+		width: 100%;
+	}
+	
+	#content{
+		border: 1px solid red;
+		margin: -4% 0% 0% 7.5%;
+		height: 98%;
+		width: 80%;
+	}
+}
+
+@page {
+	/*margin: 1.5cm;*/
+	/*size: A4 portrait;*/
+}
+
+.wrap { 
+	width: 100%; 
+	margin: 0; 
+	float: none !important; 
+}
+
+.no-print/*, nav, footer, video, audio, object, embed */{ 
+	display: none; 
+}
+
+.print {
+	display: block;
+}
+
+img {
+	max-width: 100%;
+}
+
+aside {
+	display: block;
+	page-break-before: always;
+}
+
+h1 {
+	font-size: 24pt;
+}
+
+h2 {
+	font-size: 18pt;
+}
+
+h3 {
+	font-size: 14pt;
+}
+
+p {
+	font-size: 12pt;
+	widows: 3;
+	orphans: 3;
+}
+
+a, a:visited {
+	text-decoration: underline;
+}
+
+a:link:after, a:visited:after { 
+	content: " (" attr(href) ") ";
+}
+
+p a {
+	word-wrap: break-word;
+}
+
+q:after {
+	content: " (" attr(cite) ")"
+}
+
+a:after, a[href^="javascript:"]:after, a[href^="#"]:after { 
+	content: ""; 
+}  
+
+.page-break { 
+	page-break-before: always; 
+}
+
+@media print {
+	/* CSS específico para o Firefox */
+	@-moz-document url-prefix() {
+		#container {
+			/*border: 1px solid red;*/
+			background: url("http://sistemascbm.rn.gov.br/serten/img/avcb.png") no-repeat;
+			background-position: left center; 
+			background-size: 95% 100%;
+			margin:0;
+			padding-top: 10%;
+			padding-bottom: 0;
+			height: 100%;
+			width: 100%;
+		}
+		
+		#content{
+			border: 1px solid black;
+			margin: -4% 0% 0% 7.5%;
+			height: 98%;
+			width: 80%;
+		}
+	}
+	
+	#container {
+		border: 1px solid blue;
+		background: url("http://sistemascbm.rn.gov.br/serten/img/avcb.png") no-repeat;
+		background-position: left center; 
+		background-size: 95% 100%;
+		margin:0;
+		/*padding-top: 20%;
+		padding-bottom: 0;*/
+		height: 98%;
+		width: 100%;
+	}
+	
+	#content{
+		border: 1px solid yellow;
+		font-size: 8pt;
+	}
+}

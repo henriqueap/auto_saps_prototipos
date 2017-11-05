@@ -1,0 +1,44 @@
+
+
+#nav { margin-bottom: 0px; margin-top: 0px; }
+#nav ul li,
+#nav ul li a { float: left; display: block; background: #f7f7f7; font-size: 12px; font-weight: bold; }
+#nav ul li:first-child a { border-left: 1px solid #f7f7f7; }
+#nav ul li a { color: #666; padding: 10px 10px 11px 20px; border-top: 1px solid #CCCCCC; border-right: 1px solid #f7f7f7; border-bottom: 1px solid #CCCCCC; text-decoration: none; }
+#nav ul li a:hover { background: #f7f7f7; color: #d54e21; }
+#nav ul li a.selected { border-bottom: 1px solid #f7f7f7; }
+#nav ul li a.selected:hover { background: #f7f7f7; border-bottom: 1px solid #ccc; }
+#nav ul li a { margin-right: 20px; }
+#nav ul li a.last { margin-right: 0px; }
+#nav ul li li a { margin-right: 0px; }
+#nav ul li span.ui-icon { position: absolute; left: 2px; top: 16px; margin: -8px 0px 0px 0px; }
+
+.sf-menu, .sf-menu * { margin: 0; padding: 0; list-style: none; }
+.sf-menu { line-height: 1.0; }
+.sf-menu ul { position: absolute; top: -999em; width: 10em; }
+.sf-menu ul li { width: 100%; }
+.sf-menu li:hover { visibility: inherit; }
+.sf-menu li { float: left; position: relative; }
+.sf-menu a { display: block; position: relative; }
+.sf-menu li:hover ul,
+.sf-menu li.sfHover ul { left: 0; top: 33px; z-index: 99; }
+ul.sf-menu li:hover li ul,
+ul.sf-menu li.sfHover li ul { top: -999em; }
+ul.sf-menu li li:hover ul,
+ul.sf-menu li li.sfHover ul { left: 10em; top: 0; }
+ul.sf-menu li li:hover li ul,
+ul.sf-menu li li.sfHover li ul { top: -999em; }
+ul.sf-menu li li li:hover ul,
+ul.sf-menu li li li.sfHover ul { left: 10em; top: 0; }
+
+#nav ul li:first-child ul { margin: 2px 0px 0px -1px; }
+#nav ul li ul { margin: 1px 0px 0px -1px; }
+#nav li li:first-child a { border-top: 1px solid #eee; }
+#nav li li a { background: #f7f7f7; border-top: 0px solid #f7f7f7; border-bottom: 1px solid #f7f7f7; border-left: 1px solid #f7f7f7; }
+#nav li li a:hover { color: #d54e21; background: #fafafa; }
+#nav li li a.separator { border-bottom: 1px dashed #bbb; }
+
+#nav li li li:first-child { margin: -2px 0px 0px 0px; border-left: 0px solid #ccc; }
+#nav li li li { margin: 0px 0px 0px 0px; }
+
+#nav li li a.has-ul { background-image: url(../img/icons/bullet_arrow_right.png); background-position: right; background-repeat: no-repeat; }
